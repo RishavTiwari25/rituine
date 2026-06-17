@@ -21,20 +21,6 @@ npm install
 4. Under **Network Access**, add `0.0.0.0/0` to allow connections from anywhere (needed for Vercel).
 5. Click **Connect** → **Connect your application** → copy the connection string.
 
-### 3. Configure Environment Variables
-
-```bash
-cp .env.local.example .env.local
-```
-
-Edit `.env.local`:
-
-```env
-MONGODB_URI=mongodb+srv://youruser:yourpassword@yourcluster.mongodb.net/rituine?retryWrites=true&w=majority
-AUTH_PIN=YourSecretPin123
-NEXT_PUBLIC_AUTH_PIN=YourSecretPin123
-```
-
 > `AUTH_PIN` protects your API — only requests containing this PIN can modify data.  
 > `NEXT_PUBLIC_AUTH_PIN` must be identical — it's used by the browser to call the API.
 
